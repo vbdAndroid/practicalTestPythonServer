@@ -1,0 +1,31 @@
+package com.example.practicaltestpythonserver.network
+
+import com.example.practicaltestpythonserver.mvvm.dataModel.respose
+import com.example.practicaltestpythonserver.mvvm.dataModel.seatsResponse
+import com.example.practicaltestpythonserver.network.request.LoginRequest
+import com.example.practicaltestpythonserver.network.response.LoginSuccessResponse
+import retrofit2.Call
+import retrofit2.Response
+import retrofit2.http.Body
+import retrofit2.http.GET
+import retrofit2.http.Headers
+import retrofit2.http.POST
+
+interface ApiService {
+
+    @GET("/register")
+    fun getScreens(): Call<respose>
+
+
+    //    @Headers("Content-Type: application/json")
+    @POST("api/login")
+    suspend fun login1(@Body loginRequest: LoginRequest): Call<Void>
+
+    @POST("api/login")
+    fun login(@Body loginRequest: LoginRequest): Call<Void>
+
+    @POST("api/register")
+    fun register(@Body loginRequest: LoginRequest): Call<Void>
+
+
+}

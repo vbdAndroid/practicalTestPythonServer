@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/purple_500</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="light_grey">#BDBDBD</color>
+    <color name="appBackground">#FFFFFF</color>
+    <color name="textNormal">#212121</color>
+    <color name="titleGray">#757575</color>
+    <color name="error_color">#F44336</color>
+    <color name="lightest_gray">#F2F2F2</color>
+    <color name="red">#F44336</color>
+    <color name="dark_orange">#CB882B</color>
+    <color name="push_background">#474264</color>
+    <color name="link_color">#007BFF</color>
+    <color name="divider">@color/lightest_gray</color>
+    <color name="colorTeamWhite">#FEFEFE</color>
+    <color name="colorInstagramYellow">#FFF5EC53</color>
+    <color name="colorInstagramOrange">#FFE48244</color>
+    <color name="colorInstagramPink">#FFD15767</color>
+    <color name="colorInstagramDarkPink">#FFC84278</color>
+    <color name="colorInstagramBlue">#FF192CFA</color>
+    <color name="colorTikTokBlack">#010101</color>
+    <color name="colorTikTokWhite">#FEFEFE</color>
+    <color name="colorTikTokPinkOne">#ED1D51</color>
+    <color name="colorTikTokPinkTwo">#ED1D52</color>
+</resources>
