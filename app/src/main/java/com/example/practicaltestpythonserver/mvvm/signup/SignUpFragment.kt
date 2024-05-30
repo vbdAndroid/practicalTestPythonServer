@@ -15,6 +15,7 @@ import com.example.practicaltestpythonserver.mvvm.dataInterface.MovieItemClickLi
 import com.example.practicaltestpythonserver.mvvm.activity.userActivityVM
 import com.example.practicaltestpythonserver.databinding.MovieScreensMainBinding
 import com.example.practicaltestpythonserver.databinding.SignUpLayouyBinding
+import com.example.practicaltestpythonserver.mvvm.LoginFragmentDirections
 import com.example.practicaltestpythonserver.mvvm.activity.ScreenListAdapter
 import com.example.practicaltestpythonserver.mvvm.dataModel.screenData
 import dagger.hilt.android.AndroidEntryPoint
@@ -35,7 +36,13 @@ class SignUpFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         bindObservers()
-        viewModel.register("john2@email.com", "dogsname201")
+        clickListener()
+    }
+    private fun clickListener(){
+        binding.btnRegister.setOnClickListener {
+            viewModel.register("john2@email.com", "dogsname201")
+
+        }
     }
 
    private fun bindObservers() {
