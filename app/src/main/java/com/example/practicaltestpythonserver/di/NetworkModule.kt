@@ -17,9 +17,8 @@ object NetworkModule {
     @Singleton
     @Provides
     fun provideApiService(): ApiService {
-        return Retrofit.Builder()
+        return Retrofit.Builder() //r http://127.0.0.1:5001
             .baseUrl("http://10.0.2.2:5001")
-//            .baseUrl("https://www.jsonkeeper.com")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
             .create(ApiService::class.java)

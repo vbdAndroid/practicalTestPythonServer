@@ -1,5 +1,6 @@
 package com.example.practicaltestpythonserver.network
 
+import com.example.practicaltestpythonserver.mvvm.dataModel.InspectionResponse
 import com.example.practicaltestpythonserver.mvvm.dataModel.respose
 import com.example.practicaltestpythonserver.mvvm.dataModel.seatsResponse
 import com.example.practicaltestpythonserver.network.request.LoginRequest
@@ -13,11 +14,6 @@ import retrofit2.http.POST
 
 interface ApiService {
 
-    @GET("/register")
-    fun getScreens(): Call<respose>
-
-
-    //    @Headers("Content-Type: application/json")
     @POST("api/login")
     suspend fun login1(@Body loginRequest: LoginRequest): Call<Void>
 
@@ -27,5 +23,9 @@ interface ApiService {
     @POST("api/register")
     fun register(@Body loginRequest: LoginRequest): Call<Void>
 
+    @GET("api/inspections/start")
+    fun getQuestions(): Call<InspectionResponse>
 
+    @POST("api/inspections/submit")
+    fun submitAnswers(@Body inspectionResponse: InspectionResponse): Call<Void>
 }

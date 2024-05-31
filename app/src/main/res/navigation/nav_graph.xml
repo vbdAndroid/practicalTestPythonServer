@@ -11,6 +11,11 @@
         android:label="Popular Fragment"
         tools:layout="@layout/movie_screens_main" >
         <action
+            android:id="@+id/action_mainScreenFragment_to_questionFragment"
+            app:destination="@id/questionFragment"
+            />
+
+        <action
             android:id="@+id/action_mainScreenFragment_to_signUpFragment"
             app:destination="@id/signUpFragment"
              />
@@ -19,6 +24,13 @@
         android:id="@+id/signUpFragment"
         android:name="com.example.practicaltestpythonserver.mvvm.signup.SignUpFragment"
         android:label="signUp Fragment"
+        >
+
+    </fragment>
+    <fragment
+        android:id="@+id/questionFragment"
+        android:name="com.example.practicaltestpythonserver.mvvm.questionSurvey.QuestionAnswerFragment"
+        android:label="question Fragment"
         >
 
     </fragment>

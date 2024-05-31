@@ -15,7 +15,6 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class LoginFragment : Fragment() {
 
-
     val viewModel: userActivityVM by viewModels()
     lateinit var binding: MovieScreensMainBinding
 
@@ -35,31 +34,24 @@ class LoginFragment : Fragment() {
 
     }
 
-    private fun clickListener(){
-        binding.btnLogin.setOnClickListener {
-            viewModel.login1(binding.edtUserName.text.toString(), binding.edtPassword.text.toString())
 
+    private fun clickListener() {
+        binding.btnLogin.setOnClickListener {
+            viewModel.loginTest(binding.edtUserName.text.toString(),binding.edtPassword.text.toString())
         }
-        binding.txtSignUp.setOnClickListener{
+        binding.txtSignUp.setOnClickListener {
             val action =
                 LoginFragmentDirections.actionMainScreenFragmentToSignUpFragment()
             findNavController().navigate(action)
         }
     }
-   private fun bindObservers() {
+
+    private fun bindObservers() {
         viewModel.statusCode.observe(viewLifecycleOwner) { statusCode ->
             if (statusCode == 200) {
-                Log.e("Login", "LOGIN SUCCESS${statusCode}")
+                val action = LoginFragmentDirections.actionMainScreenFragmentToQuestionFragment()
+                findNavController().navigate(action)
             }
-            when (statusCode) {
-                200 -> {
-                    Log.e("Login", "LOGIN SUCCESS")
-                }
-                400 -> println("Bad request: ")
-                401 -> println("Unauthorized: ")
-                else -> println("Unexpected status code:")
-            }
-
         }
     }
 
